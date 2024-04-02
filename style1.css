@@ -367,7 +367,9 @@ font-family: 'Courier New', monospace;
 
 
 
-
+@media (max-width: 768px) {
+     /* Styles for mobile devices */
+   }
 
 
 
