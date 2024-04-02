@@ -1,0 +1,377 @@
+
+
+
+
+:root {
+  --body-bg: black;
+  --nav-bg: 8B3AD7;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: system-ui;
+}
+body {
+  margin: 0;
+  font-size: 1.25rem;
+  background: white;/*CHANGE THE COLOR OF THE PAGE*/
+  padding-inline-start: 20rem;
+  color: black;/*color of the letters*/
+}
+nav {
+  background:#999999 ;/*the color of the bar*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-block: 2rem;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.nav-list a {
+  color: white;/*CHANGETHE COLOR OF THE BUTTENS LETTERS*/
+  display: block;
+  text-decoration: none;
+}
+
+.nav-list li {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  margin-inline: 1rem 0;
+  /* prevent animation glitch on right side */
+  box-shadow: 2px 0 0 var(--body-bg);
+}
+
+.nav-list li.active {
+  view-transition-name: nav;
+  display: block;
+  background: 8B3AD7 ;/*CHANGE THE COLOR OF THE COLOR OF THE SARONDING COLOR OF THE ACTIVE BUTTENS*/
+  position: relative;
+  z-index: -1;
+  border-radius: 100vw 0 0 100vw;
+}
+
+::view-transition-group(nav) {
+  animation-duration: 1s;
+}
+
+.nav-list li.active::before,
+.nav-list li.active::after {
+  --border-radius: 1rem;
+
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  right: 0rem;
+  background:#999999 ;/*CHANGE THE COLOR OF THE BLOCKS AT THE CONER OF THE SARONDING COLOR OF THE BUTTEN*/
+}
+
+.nav-list li.active::before {
+  border-radius: 0 0 var(--border-radius);
+  top: calc(var(--border-radius) * -1);
+  box-shadow: 5px 5px 0 5px 8B3AD7;/*CHANGE THE COLOR OF THE BLOCKS AT THE CONER OF THE SARONDING COLOR OF THE BUTTEN*/
+}
+
+.nav-list li.active::after {
+  border-radius: 0 var(--border-radius) 0 0;
+  bottom: calc(var(--border-radius) * -1);
+  box-shadow: 5px -5px 0 5px 8B3AD7  ;/*CHANGE THE COLOR OF THE BLOCKS AT THE CONER OF THE SARONDING COLOR OF THE BUTTEN*/
+}
+
+.nav-list li:nth-child(1) a {
+  view-transition-name: test;
+}
+
+.nav-list li:nth-child(2) a {
+  view-transition-name: test-2;
+}
+
+.nav-list li:nth-child(3) a {
+  view-transition-name: test-3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+  background-image: url("background.jpg"); Replace 'background.jpg' with your image file 
+  background-size: cover;  Adjust the background size as needed */
+  
+
+
+
+
+.right-image{
+/*border-radius:10px;*/ 
+ position: absolute;
+    top: 50px; /* move the photo 50px down from the top */
+    left: 300px; /* move the photo 20px from the left */	
+    margin-top: 110px; /* Move the photo 50px down */
+}
+
+
+
+.white-text {
+  color: white;
+}
+
+
+.first{
+margin-left: 0px; /* Adjust the value as needed */
+ padding-left: 30px;  	
+  border-radius:10px; 
+ margin-top: 100px; /* Adjust the value as needed */
+}
+
+   
+.image-container {
+       
+    
+   margin-left: 500px; 
+}
+ styles.css 
+   ul.custom-list {
+     padding-left: 1000px;
+   }
+
+
+
+li:has([aria-current]) {
+  view-transition-name: nav;
+  display: block;
+  background: var(--body-bg);
+  position: relative;
+  z-index: 100;
+  border-radius: 100vw 0 0 100vw;
+}
+
+::view-transition-group(nav) {
+  animation-duration: 1s;
+}
+
+li:has([aria-current]) {
+  z-index: -1;
+}
+
+li:has([aria-current])::before,
+li:has([aria-current])::after {
+  --br: 0.5rem;
+
+  content: "";
+  position: absolute;
+  width: var(--br);
+  height: var(--br);
+  right: 0rem;
+  top: -0.5rem;
+  background: var(--nav-bg);
+  box-shadow: 3px 3px 0 0rem var(--body-bg);
+  border-radius: 0 0 var(--br);
+}
+
+li:has([aria-current])::after {
+  border-radius: 0 var(--br) 0 0;
+  bottom: -0.5rem;
+  top: auto;
+  box-shadow: 3px -3px 0 0rem var(--body-bg);
+}
+
+.logo {
+    position: relative;
+}
+
+
+
+.logo{
+	position: absolute;
+    top: 70px; /* move the photo 50px down from the top */
+    left: 250px; /* move the photo 20px from the left */	
+    margin-top: 0px; /* Move the photo 50px down */
+	border-radius: 10px; /* Adjust the value as needed */
+}
+	
+	
+	
+	
+	
+	
+	
+	* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+   
+}
+
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 10px;/*Searchbox size leigth*/
+  margin-top: 90px;
+  margin-right: 250px;/*move Search bar rigth*/
+  border: none;
+  font-size: 17px;
+   border-radius:10px;/*Searchbox radius*/
+   background-color:white;
+    overflow: hidden;
+	width: 300px; /* Set the desired width */
+	top: 0;
+	position: absolute;
+}
+
+	
+	
+	
+.top-element {
+       position: absolute;
+       top: 0;
+     }
+	 
+	 
+	 
+	 
+	 
+
+	 
+	 
+	
+	 
+
+	 
+	 body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+  .bg-image {
+  /* The image used */
+  background-image: url(" JJJJ.jpg ");
+  width: 1500px;
+  
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /*Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: right;
+ left:80;
+  }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+
+
+.text{
+position: absolute;
+  text-align: center;
+color:white;
+top:500px;
+float: right;
+ left:2;
+padding:70px;
+font-family: 'Brush Script MT', cursive;
+
+}
+	
+
+
+.gogo{
+	
+	
+border-radius:20px;	
+	float: left; /* Float the image to the left */
+ top:100px;
+  margin-left: 700px; /* Add some space between the image and text */
+}
+
+.momo{
+	
+position: absolute;	
+color: white;
+float: left; /* Float the image to the left */
+top:300px;
+ margin-left:0px;
+
+/*font-size: 12px; /* Set the font size to 12 pixels */
+font-family: 'Courier New', monospace;
+}
+
+
+.head{
+font-size: 60px;	
+font-family: 'Courier New', monospace;	
+}
+
+
+
+
+
+
+
+
+
+
+
