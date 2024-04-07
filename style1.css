@@ -367,9 +367,14 @@ font-family: 'Courier New', monospace;
 
 
 
-@media (max-width: 768px) {
-     /* Styles for mobile devices */
-   }
+@media screenand (max-width: 600px )
+{
+h1{
+font-size: 36px;
+}
+}
+
+
 
 
 
